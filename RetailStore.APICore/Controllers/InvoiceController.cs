@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using RetailStore.APICore.Classes;
 using RetailStore.APICore.Models;
-
+//
 namespace RetailStore.APICore.Controllers
 {
     [ApiController]

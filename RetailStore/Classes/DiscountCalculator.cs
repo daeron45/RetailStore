@@ -10,7 +10,7 @@ namespace RetailStore.Classes
             decimal totalDiscountAmount = 0;
             decimal nonGroceryAmount = 0;
 
-            // Bakkaliye ürünleri dikkate alınmayacak şekilde fiyatlar toplanıyor
+            // Bakkaliye ürünleri dikkate alınmayacak şekilde fiyatlar toplanıyor.
             foreach (var product in invoice.Products)
             {
                 if (!product.IsGrocery)
@@ -36,7 +36,7 @@ namespace RetailStore.Classes
             // Toplam tutara göre her 100$ için 5$ indirim hesabı
             totalDiscountAmount += Math.Floor(invoice.SubTotal / 100) * 5m;
 
-            // İndirim ve Toplam Tutar atanıyor
+            // İndirim ve Toplam Tutar atanıyor.
             invoice.DiscountAmount = totalDiscountAmount;
             invoice.TotalAmount = invoice.SubTotal - totalDiscountAmount;
 

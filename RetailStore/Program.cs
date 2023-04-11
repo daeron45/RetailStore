@@ -42,7 +42,7 @@ namespace RetailStore
             var calculatedInvoiceDiscountAmount = 0M;
             var calculatedInvoiceTotalAmount = 0M;
 
-            // API isteği için gerekli bilgileri ayarla
+            // API isteği için gerekli bilgileri ayarla.
             var model = new InvoiceCustomerModel { Invoice = invoice, Customer = customer };
 
             var json = JsonConvert.SerializeObject(model);
@@ -52,16 +52,15 @@ namespace RetailStore
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             var responseMessage = await client.PostAsync("https://localhost:7147/api/invoice/discount", content);
 
-            // Yanıtı oku
+            // Yanıtı oku.
             var responseString = await responseMessage.Content.ReadAsStringAsync();
             var responseObject = JsonConvert.DeserializeObject<Invoice>(responseString);
 
             calculatedInvoiceSubTotal = Convert.ToDecimal(responseObject.SubTotal);
             calculatedInvoiceDiscountAmount = Convert.ToDecimal(responseObject.DiscountAmount);
             calculatedInvoiceTotalAmount = Convert.ToDecimal(responseObject.TotalAmount);
-
             //
-            // Ekrana yazdır
+            // Ekrana yazdır.
             Console.WriteLine($" Tutar          : {calculatedInvoiceSubTotal:n2}");
             Console.WriteLine($" İndirim Tutarı : {calculatedInvoiceDiscountAmount:n2}");
             Console.WriteLine($" Net Tutar      : {calculatedInvoiceTotalAmount:n2}");

@@ -4,7 +4,7 @@ namespace RetailStore.Models
 {
     public class Customer
     {
-        public int Id { get; set; }                                 // ID
+        public int Id { get; set; }                                 // Müşteri Id
         public string NameSurname { get; set; }                     // Müşteri AdıSoyadı
         public bool IsEmployee { get; set; }                        // Çalışan Mı ?
         public bool IsMember { get; set; }                          // Üye Mi ?

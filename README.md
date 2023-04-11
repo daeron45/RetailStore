@@ -8,4 +8,6 @@ Bu uygulama, bir API proje ve onu  çalýþtýran bir Console projeden oluþur. Her i
 
 - Projeyi test etmek için Postman gibi bir araç kullanarak HTTP POST isteklerini http://localhost:port/api/invoice/discount adresindeki API uç noktasýna 'Invoice' ve 'Customer' model parametreleriyle gönderebilirsiniz. Console projesi de bu API yi test etmek için kullanabileceðiniz istek kodlarýný içerir. Önce API projesini çalýþtýrýp, Console projesindeki 'Invoice' ve 'Customer' modellerinin verilerini istediðiniz gibi düzenleyip çalýþtýrsanýz sonucu görebilirsiniz.
 
+- API uygulamasýný ayrýca Swagger ile de test edebilirsiniz.
+
 Bu API, web veya mobil uygulamasýna entegre edilebilir ve müþterilerin indirimli fatura tutarlarýný görmelerini saðlanabilir.
