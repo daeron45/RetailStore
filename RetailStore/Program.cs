@@ -60,7 +60,7 @@ namespace RetailStore
             calculatedInvoiceDiscountAmount = Convert.ToDecimal(responseObject.DiscountAmount);
             calculatedInvoiceTotalAmount = Convert.ToDecimal(responseObject.TotalAmount);
 
-
+            //
             // Ekrana yazdır
             Console.WriteLine($" Tutar          : {calculatedInvoiceSubTotal:n2}");
             Console.WriteLine($" İndirim Tutarı : {calculatedInvoiceDiscountAmount:n2}");
